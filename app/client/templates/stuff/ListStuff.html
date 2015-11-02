@@ -8,6 +8,7 @@
           <th>Name</th>
           <th>Quantity</th>
           <th>Edit</th>
+          <th>Delete</th>
         </tr>
         </thead>
 
@@ -17,6 +18,7 @@
             <td>{{name}}</td>
             <td>{{quantity}}</td>
             <td><a href="{{pathFor 'EditStuff'}}">Edit</a></td>
+            <td><a href="{{pathFor 'DeleteStuff'}}">Delete</a></td>
           </tr>
         {{/each}}
         </tbody>

@@ -1,8 +1,56 @@
 <template name="Home">
-  <img style="float:left" width="240px" class="img-circle" src="/images/meteor-logo.png" />
-  <div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="well">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+            </thead>
 
-    <h1>Welcome to this template</h1>
-    <p>Now get to work and modify this app!</p>
+            <tbody>
+            {{#each stuffList}}
+            <tr>
+              <td>{{name}}</td>
+              <td>{{quantity}}</td>
+              <td><a href="{{pathFor 'EditStuff'}}">Edit</a></td>
+              <td><a href="{{pathFor 'DeleteStuff'}}">Delete</a></td>
+            </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="well">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {{#each stuffList}}
+            <tr>
+              <td>{{name}}</td>
+              <td>{{quantity}}</td>
+              <td><a href="{{pathFor 'EditStuff'}}">Edit</a></td>
+              <td><a href="{{pathFor 'DeleteStuff'}}">Delete</a></td>
+            </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
